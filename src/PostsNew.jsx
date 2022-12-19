@@ -11,8 +11,8 @@ export function PostsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    console.log("handleSubmit", params);
-    props.onCreatePost(params);
+    console.log("handleSubmit new post");
+    handleCreatePost(params);
     event.target.reset();
   };
 

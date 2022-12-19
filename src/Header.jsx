@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
 import { useState, useEffect } from "react";
 import { LogoutLink } from "./LogoutLink";
 
@@ -13,6 +14,16 @@ export function Header() {
 
   const handleSignupClose = () => {
     setIsSignupVisible(false);
+  };
+
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
+
+  const handleLoginShow = () => {
+    setIsLoginVisible(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginVisible(false);
   };
 
   return (
@@ -51,7 +62,9 @@ export function Header() {
                 </li>
                 | |
                 <li className="nav-item">
-                  <Link to="/Login">Log In</Link>
+                  <a onClick={handleLoginShow} href="#">
+                    Login
+                  </a>
                 </li>
                 ||
                 <li className="nav-item">
@@ -76,6 +89,9 @@ export function Header() {
         </nav>
         <Modal show={isSignupVisible} onClose={handleSignupClose}>
           <Signup />
+        </Modal>
+        <Modal show={isLoginVisible} onClose={handleLoginClose}>
+          <Login />
         </Modal>
       </header>
     </div>

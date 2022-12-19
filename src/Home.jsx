@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 // import { PostsNew } from "./PostsNew";
-import { Signup } from "./Signup";
+// import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { PostsIndex } from "./PostsIndex";
@@ -65,32 +65,18 @@ export function Home() {
 
   return (
     <div>
-      <div className="container text-center">
-        <div>
-          <Snowfall
-            color="gold"
-            // style={{ background: "#fff" }}
-            snowflakeCount={200}
-          />
-        </div>
-        <div className="row">
-          {/* <div className="col">
-            <Signup />
-          </div> */}
-          <div className="col">
-            {/* <Login /> */}
-            {/* <LogoutLink /> */}
-          </div>
-          {/* <div className="col">
-            <PostsNew onCreatePost={handleCreatePost} />
-          </div> */}
-        </div>
-      </div>
       <div className="container">
         <Modal show={isPostsShowVisible} onClose={handleHidePost}>
           <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
         </Modal>
         <PostsIndex posts={posts} onSelectPost={handleShowPost} />
+      </div>
+      <div>
+        <Snowfall
+          color="silver"
+          // style={{ background: "#fff" }}
+          snowflakeCount={200}
+        />
       </div>
     </div>
   );
