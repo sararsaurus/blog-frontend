@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { PostsNew } from "./PostsNew";
+// import { PostsNew } from "./PostsNew";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { PostsIndex } from "./PostsIndex";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
+import Snowfall from "react-snowfall";
 
 export function Home() {
   const [posts, setPosts] = useState([]);
@@ -30,11 +31,11 @@ export function Home() {
     setIsPostsShowVisible(false);
   };
 
-  const handleCreatePost = (params) => {
-    axios.post("http://localhost:3000/posts.json", params).then((response) => {
-      setPosts([...posts, response.data]);
-    });
-  };
+  // const handleCreatePost = (params) => {
+  //   axios.post("http://localhost:3000/posts.json", params).then((response) => {
+  //     setPosts([...posts, response.data]);
+  //   });
+  // };
 
   const handleUpdatePost = (id, params) => {
     axios.patch(`http://localhost:3000/posts/${id}.json`, params).then((response) => {
@@ -65,14 +66,21 @@ export function Home() {
   return (
     <div>
       <div className="container text-center">
+        <div>
+          <Snowfall
+            color="gold"
+            // style={{ background: "#fff" }}
+            snowflakeCount={200}
+          />
+        </div>
         <div className="row">
           {/* <div className="col">
             <Signup />
           </div> */}
-          {/* <div className="col">
-            <Login />
+          <div className="col">
+            {/* <Login /> */}
             <LogoutLink />
-          </div> */}
+          </div>
           {/* <div className="col">
             <PostsNew onCreatePost={handleCreatePost} />
           </div> */}

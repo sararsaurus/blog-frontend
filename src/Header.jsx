@@ -38,21 +38,21 @@ export function Header() {
                 <li className="nav-item">
                   <Link to="/">Home</Link>
                 </li>
-                |
+                | |
                 <li className="nav-item">
                   <Link to="/about">About</Link>
                 </li>
-                |
+                | |
                 <li className="nav-item">
                   <a onClick={handleSignupShow} href="#">
                     Signup
                   </a>
                 </li>
-                |
+                | |
                 <li className="nav-item">
                   <Link to="/Login">Log In</Link>
                 </li>
-                |
+                | |
                 <li className="nav-item">
                   <Link to="/posts-new">New Post</Link>
                 </li>
