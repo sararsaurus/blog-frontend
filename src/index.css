@@ -1,0 +1,19 @@
+#posts-index img {
+  width: 300px;
+}
+
+#posts-index,
+#posts-show,
+#signup {
+  color:darkgoldenrod;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  font-family: fantasy;
+  color: whitesmoke;
+  background-image: url('./assets/moroccan-flower-dark.webp');
+}
