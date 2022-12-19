@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { useState, useEffect } from "react";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   const [isSignupVisible, setIsSignupVisible] = useState(false);
@@ -52,7 +53,11 @@ export function Header() {
                 <li className="nav-item">
                   <Link to="/Login">Log In</Link>
                 </li>
-                | |
+                ||
+                <li className="nav-item">
+                  <LogoutLink />
+                </li>
+                ||
                 <li className="nav-item">
                   <Link to="/posts-new">New Post</Link>
                 </li>

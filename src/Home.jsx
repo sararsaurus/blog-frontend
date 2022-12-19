@@ -79,7 +79,7 @@ export function Home() {
           </div> */}
           <div className="col">
             {/* <Login /> */}
-            <LogoutLink />
+            {/* <LogoutLink /> */}
           </div>
           {/* <div className="col">
             <PostsNew onCreatePost={handleCreatePost} />
